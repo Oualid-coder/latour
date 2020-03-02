@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>JavaScript : Exercice 28</title>
+	<script>
+		/*********************************
+			*************EXERCICE*************
+			**********************************
+				Dans l'exercice précédent, le nombre de saisies de l'utilisateur est écrit dans le code.
+				
+				Reprenez le code de l'exercice précédent. Après chaque saisie, demandez à l'utilisateur s'il souhaite faire une nouvelle saisie.
+				Quand il répond par la négative, affichez successivement toutes ses saisies dans des B.d.D.
+				
+				Utilisez l'attribut d'événement onload, la fonction prompt(), une boucle for, des boucles while et la fonction alert().
+			*/
+
+		saisirText = () => {
+
+			var monTableau = [];
+			var saisir = confirm('voulez vous saisir un text ?');
+
+			while (saisir == true) {
+
+				var leTexte = prompt('veuillez saisir le text ');
+
+				while (saisir && !leTexte) {
+					var leTexte = prompt('veuillez saisir le text ');
+				}
+
+				var saisir = confirm('voulez vous saisir un text ?');
+				monTableau.push(leTexte);
+			}
+
+			for (i = 0; i < monTableau.length; i++) {
+				alert(monTableau[i]);
+			}
+		}
+	</script>
+</head>
+
+<body onload="saisirText();">
+	<h1>Mon nouveau document</h1>
+	<p>Premier paragraphe</p>
+	<p>Deuxième paragraphe</p>
+	<noscript>
+		<p>Veuillez activer JavaScript</p>
+	</noscript>
+</body>
+
+</html>
