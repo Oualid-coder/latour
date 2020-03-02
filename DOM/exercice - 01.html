@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>JavaScript & DOM : Les Objets - Exercice 1</title>
     <script>
       //Énoncé :
@@ -9,49 +9,52 @@
         1. La déclaration JSON qui suit ne doit à aucun moment être modifiée.
       */
       var schmilblick = {
-        taille:'grand',
-        dimensions:{
-          largeur:2.5,
-          longueur:3,
-          hauteur:0.02
+        taille: "grand",
+        dimensions: {
+          largeur: 2.5,
+          longueur: 3,
+          hauteur: 0.02
         },
-        couleurs:['rouge','jaune','or','bleu'],
-        peutVoler:false,
-        matiere:'laine',
-        queSuisJe:function(){
-          alert('A votre avis que suis-je ?');
+        couleurs: ["rouge", "jaune", "or", "bleu"],
+        peutVoler: false,
+        matiere: "laine",
+        queSuisJe: function() {
+          alert("A votre avis que suis-je ?");
         }
       };
 
       //VOUS NE DEVEZ PAS MODIFIER CETTE DECLARATION EN REPONDANT AUX QUESTIONS QUI SUIVENT.
-      
+
       /*
         2. Quelle est la taille du schmilblick ? Affichez dans une boite de dialogue la taille du schmilblick
       */
-      
+      alert(schmilblick.taille);
       /*
         3. Quelle est la matière dont est composé le schmilblick ? Affichez dans une boite de dialogue la matière du schmilblik
       */
-
+      alert(schmilblick.matiere);
       /*
         4. Quelle est la superficie du schmilblick ? Affichez dans une boite de dialogue la superficie du schmilblik (largeur x longeur)
       */
-
+      alert(schmilblick.largeur * schmilblick.longueur);
       /*
         5. De quel couleur est le schmilblick ? Affichez successivement dans des boites de dialogue les couleurs du schmilblick.
-      */ 
- 
+      */
+
+      alert(schmilblick.color);
       /*
         6. Le schmilblick peut voler ! Changez la valeur de la propriété peutVoler du schmilblick (sans modifier la déclaration).
-      */ 
-      
+      */
+
+      schmilblick.peutVoler = true;
       /*
         7. Le schmilblick est magique ! Ajoutez une propriété estMagique au schmilblick avec comme valeur true (sans modifier la déclaration).
-      */
-      
+      */ schmilblick.estmagique = true;
+
       /*
         8. Exécutez la méthode queSuisJe du schmilblick.
       */
+      queSuisJe();
     </script>
   </head>
   <body>
