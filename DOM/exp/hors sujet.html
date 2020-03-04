@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Affichage des résultats d'un étudiant</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script language="javascript" type="text/javascript">
+      function Etudiant(nom, prenom, resultats = new Array()) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.resultats = resultats;
+      }
+
+      var etudiant1 = new Etudiant("Antidote", "Albert", [15, 17, 18]);
+
+      alert("Le nom de l'étudiant est: " + etudiant1.nom);
+      alert("Le prénom de l'étudiant est: " + etudiant1.prenom);
+      alert("Les résultats de l'étudiant sont: " + etudiant1.resultats);
+      for (i = 0; i < etudiant1.resultats.length; i++) {
+        alert("Les résultats de l'étudiant sont: " + etudiant1.resultats[i]);
+      }
+      Etudiant();
+    </script>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>Affichage des résultats d'un étudiant</h1>
+      </header>
+    </section>
+  </body>
+</html>
