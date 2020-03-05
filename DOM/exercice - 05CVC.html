@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>JavaScript & DOM : Les Objets - Exercice 5</title>
     <script>
       //Énoncé :
@@ -13,125 +13,45 @@
         - La couleur est une chaîne de caractère. Elle doit être fournie pour construire un robot.
         - La matière est une chaîne de caractère. Elle est fixée au départ.
         - La durée de garantie est une chaîne de caractère. Elle est fixée au départ.
-      */
+      */    
 
-      function Robot(
-        numeroSerie,
-        nomModele,
-        nomUsage,
-        couleur,
-        matiere,
-        garantie
-      ) {
-        this.numeroSerie = numeroSerie;
-        this.nomModele = nomModele;
-        this.nomUsage = nomUsage;
-        this.couleur = couleur;
-        this.matiere = matiere;
-        this.garantie = garantie;
+      function Robot(numeroDeSerie,couleur){        
+        this.numeroDeSerie = numeroDeSerie;
+        this.nomModel = 172;
+        this.nomUsage = '';
+        this.couleur = couleur; 
+        this.matiere = 'fer' ,
+        this.dureeGarantie ='2'       
       }
-      var monRobot = new robot(
-        1232,
-        "c-18",
-        "robocop",
-        "gris",
-        "métane",
-        "100ans"
-      );
-
       /*
         2. Créez 12 robots à l'aide de cette fonction constructeur. Chaque robot aura donc un numéro de série et une couleur différente.
       */
-      var monRobot1 = new robot(
-        1231321,
-        "c-17",
-        "bumblebee",
-        "bleu",
-        "or",
-        "200ans"
-      );
-      var monRobot2 = new robot(
-        13589646,
-        "c-19",
-        "bumblebee",
-        "orange",
-        "or",
-        "200ans"
-      );
-      var monRobot3 = new robot(
-        165465,
-        "c-20",
-        "bumblebee",
-        "jaune",
-        "or",
-        "200ans"
-      );
-      var monRobot4 = new robot(
-        7778878,
-        "c-21",
-        "bumblebee",
-        "violet",
-        "or",
-        "200ans"
-      );
-      var monRobot5 = new robot(
-        11111,
-        "c-22",
-        "bumblebee",
-        "pourpre",
-        "or",
-        "200ans"
-      );
-      var monRobot6 = new robot(
-        22222,
-        "c-23",
-        "bumblebee",
-        "beige",
-        "or",
-        "200ans"
-      );
-      var monRobot7 = new robot(
-        555555,
-        "c-24",
-        "bumblebee",
-        "bleu ciel",
-        "or",
-        "200ans"
-      );
-      var monRobot8 = new robot("c-25", "bumblebee", "rose", "or", "200ans");
-      var monRobot9 = new robot("c-26", "bumblebee", "vert", "or", "200ans");
-      var monRobot10 = new robot("c-27", "bumblebee", "noir", "or", "200ans");
-      var monRobot11 = new robot("c-28", "bumblebee", "blanc", "or", "200ans");
+      robotUn = new Robot(76046, 'beige');
+      robotDeux = new Robot(12024, 'bleu');
+      robotTrois = new Robot(9862, 'blanc');
+      robotQuatre = new Robot(9862, 'rouge');
+      robotCinq = new Robot(49484, 'vert');
+      robotSix = new Robot(9174, 'noir');
+      robotSept = new Robot(2368, 'gris');
+      robotHuit = new Robot(5632, 'rose');
+      robotNeuf = new Robot(3456, 'violet');
+      robotDix = new Robot(4567, 'marron');
+      robotOnze = new Robot(7894, 'tomate');
+      robotDouze = new Robot(8954, 'skyblue');      
       /*
         3. Créez un tableau qui sera le magasin. Ce tableau devra contenir les 12 références vers les 12 objets représentant chacun des 12 robots.
-      */
-      var tabMagasin = [
-        monRobot,
-        monRobot1,
-        monRobot2,
-        monRobot3,
-        monRobot4,
-        monRobot5,
-        monRobot6,
-        monRobot7,
-        monRobot8,
-        monRobot9,
-        monRobot10,
-        monRobot11
-      ];
+      */      
+      magasin = [robotUn,robotDeux,robotTrois,robotQuatre,robotCinq,robotSix,robotSept,robotHuit,robotNeuf,robotDix,robotOnze,robotDouze];
       /*
         4. Réalisez l'algorithme suivant :
         POUR CHAQUE robot dans le magasin, AFFECTEZ un nom d'usage qui sera la concaténation du modèle, du numéro de série et de l'index du robot dans le magasin.
       */
-
-      for (var i = 0; tabMagasin.length; i++) {
-        nomUtiliser =
-          monRobot.nomUsage +
-          monRobot.nomModele +
-          monRobot.numeroSerie +
-          tabMagasin[i];
-        console.log(nomUtiliser);
+      for(var i=0; i<magasin.length;i++){ 
+        var unRobot = magasin[i];  
+        unRobot.nomUsage = 'modele ' + unRobot.nomModel + ' numero de serie ' + unRobot.numeroDeSerie + ' place dans le magasin: ' + [i];
+        console.log(unRobot.nomUsage);
       }
+          
     </script>
   </head>
   <body>
