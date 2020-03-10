@@ -1,30 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>JavaScript & DOM : Les Objets Fondamentaux - Exercice 2</title>
     <script>
       //Énoncé :
       /*
-        En JavaScript, un mécanisme de coercition transforme les types primitifs en objets en cas de besoin. Le moteur JavaScript peut transforme :
-        - Un nombre en objet de type Number;
-        - Un booléen en objet de type Boolean
-        - Une chaîne de caractère en objet de type String.
+           En JavaScript, un mécanisme de coercition transforme les types primitifs en objets en cas de besoin. Le moteur JavaScript peut transforme :
+           - Un nombre en objet de type Number;
+           - Un booléen en objet de type Boolean
+           - Une chaîne de caractère en objet de type String.
 
-        La liste des propriétés et méthodes disponibles pour les objets de type String est disponible ici : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String
-      */
-      
+           La liste des propriétés et méthodes disponibles pour les objets de type String est disponible ici : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String
+         */
+
       /*
-      1. Obligez l'utilisateur à saisir une chaîne de caractères dans une boite de dialogue. Un fois la saisie validée. Affichez dans une boite de dialogue le nombre de caractères de la chaîne de caractères saisie (propriété .length). 
-      */
-      
+         1. Obligez l'utilisateur à saisir une chaîne de caractères dans une boite de dialogue. Un fois la saisie validée. Affichez dans une boite de dialogue le nombre de caractères de la chaîne de caractères saisie (propriété .length).
+         */
+
+      firsTime = () => {
+        var saisie = prompt("veuillez saisir un texte");
+        while (!saisie) {
+          var saisie = prompt("saisir ce texte lan nikek");
+        }
+        return alert(
+          "votre texte saisie contient : " + saisie.length + "caract"
+        );
+      };
+
       /*
-      2. Utilisez la méthode .substr() pour extraire et afficher dans une boite de dialogue tous les caractères de la chaîne saisie à l'exception du premier et du dernier.
-      */
-      
+         2. Utilisez la méthode .substr() pour extraire et afficher dans une boite de dialogue tous les caractères de la chaîne saisie à l'exception du premier et du dernier.
+         */
+      secondTime = () => {
+        var saisie2 = prompt("veuillez saisir un texte");
+        while (!saisie2) {
+          var saisie2 = prompt("saisir ce texte lan nikek");
+        }
+        return alert(saisie2.substr(1, 4));
+      };
+
       /*
-      3. Utilisez la méthode .split() pour récupérer chacun des mot de la saisie utilisateur dans un tableau. Affichez séparément chaque mot dans une boîte de dialogue.
-      */
+         3. Utilisez la méthode .split() pour récupérer chacun des mot de la saisie utilisateur dans un tableau. Affichez séparément chaque mot dans une boîte de dialogue.
+         */
+      thirdTime = () => {
+        var saisie2 = prompt("veuillez saisir un texte");
+        while (!saisie2) {
+          var saisie2 = prompt("saisir ce texte lan nikek");
+        }
+        return alert("le tab retourn :" + saisie2.split(" "));
+      };
     </script>
   </head>
   <body>
